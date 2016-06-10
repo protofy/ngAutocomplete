@@ -1,0 +1,38 @@
+{
+  "author": {
+    "name": "ansgar@protofy.com"
+  },
+  "bugs": {
+    "url": "https://github.com/protofy/ngAutocomplete/issues"
+  },
+  "dependencies": {},
+  "description": "ngAutocomplete",
+  "devDependencies": {},
+  "directories": {
+    "example": "examples"
+  },
+  "keywords": [
+    "angular",
+    "google",
+    "autocomplete",
+    "autosuggest"
+  ],
+  "license": "MIT",
+  "main": "src/ngAutocomplete.js",
+  "maintainers": [
+    {
+      "email": "ansgar@protofy.com",
+      "name": "Ansgar Mertens"
+    }
+  ],
+  "name": "ng-autocomplete",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protofy/ngAutocomplete.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

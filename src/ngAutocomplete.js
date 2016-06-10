@@ -91,8 +91,8 @@ angular.module( "ngAutocomplete", [])
               scope.$apply(function() {
 
                 scope.details = result;
-
                 controller.$setViewValue(element.val());
+
               });
             }
             else {
@@ -103,14 +103,16 @@ angular.module( "ngAutocomplete", [])
           }
         })
 
-        //function to get retrieve the autocompletes first result using the AutocompleteService 
+        //function to get retrieve the autocompletes first result using the AutocompleteService
         var getPlace = function(result) {
           var autocompleteService = new google.maps.places.AutocompleteService();
           if (result.name.length > 0){
             autocompleteService.getPlacePredictions(
               {
                 input: result.name,
-                offset: result.name.length
+                offset: result.name.length,
+                types: opts.types,
+                componentRestrictions: {country: scope.options.country}
               },
               function listentoresult(list, status) {
                 if(list == null || list.length == 0) {
