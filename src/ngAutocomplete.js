@@ -106,7 +106,6 @@ angular.module( "ngAutocomplete", [])
 
         //function to get retrieve the autocompletes first result using the AutocompleteService
         var getPlace = function(result) {
-            console.log('getPlace', result);
           var autocompleteService = new google.maps.places.AutocompleteService();
           if (result.name.length > 0){
             autocompleteService.getPlacePredictions(
