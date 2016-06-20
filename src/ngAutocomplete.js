@@ -33,6 +33,7 @@ angular.module( "ngAutocomplete", [])
       require: 'ngModel',
       scope: {
         ngModel: '=',
+        actions: '=',
         options: '=?',
         details: '=?'
       },
@@ -105,6 +106,7 @@ angular.module( "ngAutocomplete", [])
 
         //function to get retrieve the autocompletes first result using the AutocompleteService
         var getPlace = function(result) {
+            console.log('getPlace', result);
           var autocompleteService = new google.maps.places.AutocompleteService();
           if (result.name.length > 0){
             autocompleteService.getPlacePredictions(
@@ -163,6 +165,11 @@ angular.module( "ngAutocomplete", [])
           initOpts()
         }, true);
 
+        scope.$watch('actions', function(val){
+            if (val) {
+                val.getPlace = getPlace;
+            }
+        });
       }
     };
   });
